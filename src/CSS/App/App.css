@@ -1,0 +1,40 @@
+.app > .header{
+    height: 40px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 1px solid #212121;
+}
+
+
+
+.app > .main > .page{
+    max-width: 650px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: auto;
+}
+
+
+.app > .main > .page > .content{
+
+    padding-bottom: 100px;
+    padding-top: 20px;
+}
+
+.app > .main > .page > .content::-webkit-scrollbar {
+    display: none;
+}
+
+.app > .main > .page > .content > *{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+  @media (max-width: 870px) {
+    .app > .main > .nav-bar.docs-nav-bar{
+        display: none;
+    }
+  }

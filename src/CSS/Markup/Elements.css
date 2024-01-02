@@ -1,0 +1,13 @@
+/* CODE */
+
+
+.page > .content pre > code.code{
+    border-radius: 10px;
+    font-size: 16px;
+
+    width: 100%;
+}
+
+.page > .content pre > code.code *{
+    font-family: 'Fira Code', monospace;
+}

@@ -1,0 +1,31 @@
+.page > .content h1{
+    font-size: 40px;
+    font-weight: 700;
+
+    padding-top: 30px;
+}
+
+.page > .content h2{
+    font-size: 28px;
+    font-weight: 500;
+    padding-top: 20px;
+
+}
+
+.page > .content h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 15px;
+
+}
+
+
+.page > .content p{
+    line-height: 30px;
+    color: #c4c4c4;
+}
+
+.page > .content p a{
+    text-decoration: underline;
+    color: blueviolet;
+}

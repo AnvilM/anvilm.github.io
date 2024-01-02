@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- FONTS -->
+    <!-- NUNITO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+    <!-- FIRACODE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ROBOTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    
+    <!-- MAIN -->
+    <link rel="stylesheet" href="../../src/CSS/Main.css">
+    <link rel="stylesheet" href="../../src/CSS/App/App.css">
+    <link rel="stylesheet" href="../../src/CSS/App/Header.css">
+
+
+
+    <link rel="stylesheet" href="../../src/CSS/App/Navbar.css">
+
+
+    <!-- MARKUP -->
+    <link rel="stylesheet" href="../../src/CSS/Markup/Main.css">
+    <link rel="stylesheet" href="../../src/CSS/Markup/Text.css">
+    <link rel="stylesheet" href="../../src/CSS/Markup/Elements.css">
+
+
+    <!-- JS -->
+
+
+    <!-- LIBS -->
+
+
+    <!-- HIGHLIGHTS.JS -->
+    <link href="../../src/libs/prism/prism.css" rel="stylesheet" />
+    <script src="../../src/libs/prism/prism.js"></script>
+
+    <!-- JQUERY -->
+    <script src="../../src/libs/jquery.js"></script>
+
+
+
+</head>
+<body>
+    <div class="root">
+
+        <div class="app">
+
+            <div class="header">
+                <div class="wrapper">
+                    <a href="../../index.html" class="logo">
+                        <div class="icon"><img src="../../src/icons/logo.svg" alt=""></div>
+                        <div class="title">Ghosty</div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="main wrapper">
+
+                <div class="nav-bar docs-nav-bar">
+
+                    <div class="list">
+                        <div class="el title">Getting Started</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/GettingStarted/Introduction.html">Introduction</a>
+                            <a class="el" href="../../docs/GettingStarted/Installation.html">Installation</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Basics</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Basics/Routing.html">Routing</a>
+                            <a class="el" href="../../docs/Basics/Controllers.html">Controllers</a>
+                            <a class="el" href="../../docs/Basics/Actions.html">Actions</a>
+                            <a class="el" href="../../docs/Basics/Middlewares.html">Middlewares</a>
+                            <a class="el" href="../../docs/Basics/Models.html">Models</a>
+                        </div>
+                    </div>
+
+                    <div class="list active">
+                        <div class="el title active">Database</div>
+                        <div class="content">
+                            <a class="el active" href="../../docs/Database/QueryBuilder.html">Query Builder</a>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Nailer</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Nailer/Introduction.html">Introduction</a>
+                            <a class="el" href="../../docs/Nailer/Commands.html">Commands</a>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Additional</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Additional/Helpers.html">Helpers</a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+    
+    
+    
+    
+    
+    
+                <div class="page">
+                    <div class="content" id="content">
+                        <h1 class="h-anchor"><a name="Query-Builder" href="#Query-Builder">Query Builder</a></h1>
+                        <h2 class="h-anchor"><a name="Introduction" href="#Introduction">Introduction</a></h2>
+
+                        <p>Query Builder - a query designer - provides a convenient, expressive interface for creating and executing database queries. It can be used to perform most types of operations and works with all supported DBMSs.</p>
+
+
+                        <h2 class="h-anchor"><a name="Using" href="#Using">Using</a></h2>
+
+                        <h3 class="h-anchor"><a name="Running-Database-Queries" href="#Running-Database-Queries">Running Database Queries</a></h3>
+
+                        <p>To run a query, use the Table method, which will return an instance of the Query Builder class; at the end of the request, use the Run method to get the result.</p>
+
+<pre><code class="language-php code">namespace App\Controllers;
+
+use App\Models\User;
+use Src\Support\Database\DB;
+
+class UserController extends Controller
+{
+    public function Index()
+    {
+        $id = DB::table('users')->select(['id'])->run();
+
+        return response($id);
+    }
+}
+</code></pre>
+
+                        <h2 class="h-anchor"><a name="Methods" href="#Methods">Methods</a></h2>
+
+
+                        <h3 class="h-anchor"><a name="Select" href="#Select">Select</a></h3>
+                        
+                        <p>To select specific columns from the database, you can use the Select method.</p>
+
+                        <pre><code class="language-php code">$id = DB::table('users')->select(['id'])->run();</code></pre>
+
+                        
+                        <h3 class="h-anchor"><a name="Insert" href="#Insert">Insert</a></h3>
+
+                        <p>To write data to a table, use the Insert method, to set the values that will be written to the field, use the Set method.</p>
+                        <p>The Set method takes 3 parameters: Column - the column in which the value will be written; Value – What will be written to the specified column; Type — optional parameter, the data type of the value.</p>
+
+<pre><code class="language-php code">DB::table('users')->insert()
+    ->set('name', 'SomeName')
+    ->set('age', 20, PDO::PARAM_INT)
+    ->run();
+</code></pre>
+
+                        <h3 class="h-anchor"><a name="Update" href="#Update">Update</a></h3>
+
+                        <p>The update method is used to update records in a table.</p>
+                        <p>The Where method takes 4 parameters: Column - the column in which the value will be written; Sign - A sign indicating >, <, =, or !=; Value – What will be written to the specified column; Type — optional parameter, the data type of the value.</p>
+<pre><code class="language-php code">DB::table('users')->update()
+    ->set('name', 'OtherName')
+    ->set('age', 21, PDO::PARAM_INT)
+    ->where('name', '=', 'SomeName')
+    ->where('age', '>', 19, PDO::PARAM_INT)
+    ->run();
+</code></pre>
+
+
+                        <h3 class="h-anchor"><a name="Delete" href="#Delete">Delete</a></h3>
+
+                        <p>The Delete method is used to delete records from a table.</p>
+
+<pre><code class="language-php code">DB::table('users')->delete()
+    ->where('name', '=', 'SomeName')
+    ->where('age', '>', 19, PDO::PARAM_INT)
+    ->run();
+</code></pre>
+                    </div>
+                </div>
+    
+    
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+    <!-- JS -->
+
+
+    <!-- FILES -->
+    <script src="../../src/JS/Main.js"></script>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- FONTS -->
+    <!-- NUNITO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+    <!-- FIRACODE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ROBOTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    
+    <!-- MAIN -->
+    <link rel="stylesheet" href="../../src/CSS/Main.css">
+    <link rel="stylesheet" href="../../src/CSS/App/App.css">
+    <link rel="stylesheet" href="../../src/CSS/App/Header.css">
+
+
+
+    <link rel="stylesheet" href="../../src/CSS/App/Navbar.css">
+
+
+    <!-- MARKUP -->
+    <link rel="stylesheet" href="../../src/CSS/Markup/Main.css">
+    <link rel="stylesheet" href="../../src/CSS/Markup/Text.css">
+    <link rel="stylesheet" href="../../src/CSS/Markup/Elements.css">
+
+
+    <!-- JS -->
+
+
+    <!-- LIBS -->
+
+
+    <!-- HIGHLIGHTS.JS -->
+    <link href="../../src/libs/prism/prism.css" rel="stylesheet" />
+    <script src="../../src/libs/prism/prism.js"></script>
+
+    <!-- JQUERY -->
+    <script src="../../src/libs/jquery.js"></script>
+
+
+
+</head>
+<body>
+    <div class="root">
+
+        <div class="app">
+
+            <div class="header">
+                <div class="wrapper">
+                    <a href="../../index.html" class="logo">
+                        <div class="icon"><img src="../../src/icons/logo.svg" alt=""></div>
+                        <div class="title">Ghosty</div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="main wrapper">
+
+                <div class="nav-bar docs-nav-bar">
+
+                    <div class="list active">
+                        <div class="el title active">Getting Started</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/GettingStarted/Introduction.html">Introduction</a>
+                            <a class="el active" href="../../docs/GettingStarted/Installation.html">Installation</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Basics</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Basics/Routing.html">Routing</a>
+                            <a class="el" href="../../docs/Basics/Controllers.html">Controllers</a>
+                            <a class="el" href="../../docs/Basics/Actions.html">Actions</a>
+                            <a class="el" href="../../docs/Basics/Middlewares.html">Middlewares</a>
+                            <a class="el" href="../../docs/Basics/Models.html">Models</a>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="list">
+                        <div class="el title">Database</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Database/QueryBuilder.html">Query Builder</a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Nailer</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Nailer/Introduction.html">Introduction</a>
+                            <a class="el" href="../../docs/Nailer/Commands.html">Commands</a>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Additional</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Additional/Helpers.html">Helpers</a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+    
+    
+    
+    
+    
+    
+                <div class="page">
+                    <div class="content" id="content">
+                        <h1 class="h-anchor"><a name="Installation" href="#Installation">Installation</a></h1>
+
+                        <h2 class="h-anchor"><a name="Creating-a-project" href="#Creating-a-project">Creating a project</a></h2>
+                        <h3 class="h-anchor"><a name="Composer" href="#Composer">Composer</a></h3>
+
+                        <p>Before starting the installation, make sure that you have <a href="http://getcomposer.org/">Composer</a> and PHP installed</p>
+
+                        <p>After you have made sure that you have <a href="http://getcomposer.org/">Composer</a> and PHP installed, you can run the following command to create a new project</p>
+
+                        <pre><code class="language-bash code">composer create-project example-project</code></pre>
+
+
+                        <h3 class="h-anchor"><a name="Github" href="#Github">Github</a></h3>
+
+                        <p>You can also copy the example application code from the Github</p>
+
+                        <pre><code class="language-bash code">git clone https://github.com/AnvilM/PHP-MVC</code></pre>
+
+
+                        <h2 class="h-anchor"><a name="Initial-Configuration" href="#Initial-Configuration">Initial Configuration</a></h2>
+
+
+                        <h3 class="h-anchor"><a name="Application-Configuration" href="#Application-Configuration">Application Configuration</a></h3>
+
+                        <p>All configuration files are stored in the config directory. You can change some settings for your application</p>
+
+
+                        <h3 class="h-anchor"><a name="Environment-Configuration" href="#Environment-Configuration">Environment Configuration</a></h3>
+
+                        <p>You can configure all the environment variables in the .env file, but remember that this file mainly contains variables needed to run the application, such as secret keys, database connection information and other services, so this file should not be stored in your repositories.</p>
+
+
+
+
+
+
+                        <h2 class="h-anchor"><a name="Starting-the-server" href="#Starting-the-server">Starting the server</a></h2>
+
+                        <p>After creating and configuring the project, you can go to the directory of the newly created project and launch the local server using <a href="../../docs/Nailer/Introduction.html">Nailer</a></p>
+
+<pre><code class="language-bash code">cd example-project
+
+php nailer serve
+</code></pre>
+
+                        
+                    </div>
+                </div>
+    
+    
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+    <!-- JS -->
+
+
+    <!-- FILES -->
+    <script src="../../src/JS/Main.js"></script>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- FONTS -->
+    <!-- NUNITO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+    <!-- FIRACODE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ROBOTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    
+    <!-- MAIN -->
+    <link rel="stylesheet" href="../../src/CSS/Main.css">
+    <link rel="stylesheet" href="../../src/CSS/App/App.css">
+    <link rel="stylesheet" href="../../src/CSS/App/Header.css">
+
+
+
+    <link rel="stylesheet" href="../../src/CSS/App/Navbar.css">
+
+
+    <!-- MARKUP -->
+    <link rel="stylesheet" href="../../src/CSS/Markup/Main.css">
+    <link rel="stylesheet" href="../../src/CSS/Markup/Text.css">
+    <link rel="stylesheet" href="../../src/CSS/Markup/Elements.css">
+
+
+    <!-- JS -->
+
+
+    <!-- LIBS -->
+
+
+    <!-- PRISM.JS -->
+    <link href="../../src/libs/prism/prism.css" rel="stylesheet" />
+    <script src="../../src/libs/prism/prism.js"></script>
+
+    <!-- JQUERY -->
+    <script src="../../src/libs/jquery.js"></script>
+
+
+
+</head>
+<body>
+    <div class="root">
+
+        <div class="app">
+
+            <div class="header">
+                <div class="wrapper">
+                    <a href="../../index.html" class="logo">
+                        <div class="icon"><img src="../../src/icons/logo.svg" alt=""></div>
+                        <div class="title">Ghosty</div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="main wrapper">
+
+                <div class="nav-bar docs-nav-bar">
+
+                    <div class="list">
+                        <div class="el title">Getting Started</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/GettingStarted/Introduction.html">Introduction</a>
+                            <a class="el" href="../../docs/GettingStarted/Installation.html">Installation</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="list active">
+                        <div class="el title active">Basics</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Basics/Routing.html">Routing</a>
+                            <a class="el active" href="../../docs/Basics/Controllers.html">Controllers</a>
+                            <a class="el" href="../../docs/Basics/Actions.html">Actions</a>
+                            <a class="el" href="../../docs/Basics/Middlewares.html">Middlewares</a>
+                            <a class="el" href="../../docs/Basics/Models.html">Models</a>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="list">
+                        <div class="el title">Database</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Database/QueryBuilder.html">Query Builder</a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Nailer</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Nailer/Introduction.html">Introduction</a>
+                            <a class="el" href="../../docs/Nailer/Commands.html">Commands</a>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="el title">Additional</div>
+                        <div class="content">
+                            <a class="el" href="../../docs/Additional/Helpers.html">Helpers</a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+    
+    
+    
+    
+    
+    
+                <div class="page">
+                    <div class="content" id="content">
+                        <h1 class="h-anchor"><a name="Controllers" href="#Controllers">Controllers</a></h1>
+                        <h2 class="h-anchor"><a name="Creating" href="#Creating">Creating</a></h2>
+                        <p>To quickly generate a new controller, you may run the <a href="../../docs/Nailer/Commands.html#make:controller">make:controller</a> <a href="../../docs/Nailer/Introduction.html">Nailer</a> <a href="../../docs/Nailer/Commands.html">command</a>. By default, all of the controllers for your application are stored in the app/controllers directory.</p>
+
+                        <pre><code class="language-bash code">php nailer make:controller UserController</code></pre>
+
+                        <p>Here is a basic controller example. In this example we get a list of all records from the Users table.</p>
+
+<pre><code class="language-php code">namespace App\Controllers;
+        
+use App\Models\User;
+
+class UserController extends Controller
+{
+    public function Index()
+    {
+        $User = new User;
+
+        $Users = $User->all();
+
+        return response($Users);
+    }
+}
+</code></pre>
+
+                        <p>The controller usage is identical to that specified when registering the <a href="../../docs/Basics/Routing.html">route</a>.</p>
+
+<pre><code class="language-php">use App\Controllers\UserController;
+
+$Route->Add()
+    ->get('/users')
+    ->controller(UserController::class)
+    ->action('Index');
+</code></pre>
+                    </div>
+                </div>
+    
+    
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+    <!-- JS -->
+    
+
+    <!-- FILES -->
+    <script src="../../src/JS/Main.js"></script>
+
+</html>

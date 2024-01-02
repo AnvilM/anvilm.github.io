@@ -1,0 +1,22 @@
+.app > .header > .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app > .header > .wrapper > *{
+    display: flex;
+    justify-content: center;
+}
+
+.app > .header > .wrapper > .logo{
+    max-width: 300px;
+    width: 100%;
+}
+
+
+.app > .header > .wrapper > .logo > .title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 10px;
+}
